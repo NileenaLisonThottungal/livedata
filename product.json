@@ -1,0 +1,74 @@
+{
+    "550 fils kitchen plastic & glassware items": {
+        "price": 110.01,
+        "description": "Plastic glassware items refer to drinkware made from various types of plastic materials rather than glass.",
+        "image": "550 FILS KITCHEN PLASTIC & GLASSWARE ITEMS.jpg",
+        "quantity": 101
+    },
+    "Arwa Water 500mL": {
+        "price": 22.0,
+        "description": "It is produced by Coca-Cola Bottling Company and is recognized for its purity and high quality.",
+        "image": "arwa.jpg",
+        "quantity": 14
+    },
+    "Aquafina water 250mL": {
+        "price": 11.0,
+        "description": "Aquafina is a well-known bottled water brand owned by PepsiCo.",
+        "image": "aquafina.jpg",
+        "quantity": 21
+    },
+    "Al Kawthar Water 6x1.5L": {
+        "price": 93.51,
+        "description": "Al Kawthar Water is recognized for its quality and accessibility, making it a popular choice ",
+        "image": "AL KAWTHAR WATER .jpg",
+        "quantity": 27
+    },
+    "reduce to clear items 300 fils": {
+        "price": 60.0,
+        "description": "Description of reduce to clear items 300 fils",
+        "image": "REDUCE TO CLEAR ITEMS 150 FILS.jpg",
+        "quantity": 28
+    },
+    "al marzook lebanese bread white 5pcs/pk": {
+        "price": 22.0,
+        "description": "Al Marzook Lebanese is likely referring to a specific brand, business, or product line associated with Lebanese cuisine or culture.",
+        "image": "whitebread.jpg",
+        "quantity": 26
+    },
+    "pepsi plastic 400ml": {
+        "price": 40.0,
+        "description": "Pepsi is a globally recognized carbonated soft drink brand owned by PepsiCo.",
+        "image": "pepsi.jpg",
+        "quantity": 27
+    },
+    "abion i/c gold cone vanilla": {
+        "price": 68.1,
+        "description": "Abion Gold Cone Vanilla is likely referring to a specific brand or product of vanilla-flavored ice cream cones. ",
+        "image": "gold.jpg",
+        "quantity": 26
+    },
+    "mirinda citrus 330ml": {
+        "price": 50.0,
+        "description": "Mirinda Citrus is a popular flavor variant of the Mirinda soft drink brand, which is owned by PepsiCo.l",
+        "image": "mirinda.jpg",
+        "quantity": 28
+    },
+    "mirinda citrus plastic 400ml": {
+        "price": 40.0,
+        "description": "Mirinda Citrus is a popular flavor variant of the Mirinda soft drink brand, which is owned by PepsiCo.",
+        "image": "mirinda_bottle.jpg",
+        "quantity": 28
+    },
+    "arwa water 1.5ltr": {
+        "price": 143.01,
+        "description": "It is produced by Coca-Cola Bottling Company and is recognized for its purity and high quality.",
+        "image": "ARWA WATER 1500ML.jpg",
+        "quantity": 28
+    },
+    "o.k. potato crisps ready salted 30gm": {
+        "price": 27.0,
+        "description": "Potato chips are a popular snack food made from thin slices of potatoes that are fried or baked until crispy. ",
+        "image": "O.K. POTATO CRISPS READY SALTED 30GM.jpg",
+        "quantity": 25
+    }
+}
