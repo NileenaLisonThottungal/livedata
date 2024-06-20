@@ -13,6 +13,7 @@ from stati import ai_module
 from stati import demand_forecast
 from stati import display
 from stati import showstat
+from restock import new
 
 # Load products from JSON file
 def load_products():
