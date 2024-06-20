@@ -7,7 +7,6 @@ from contact import show_contact_us
 from raffle import show_raffle_draw
 from charity import show_charity_content
 from policies import show_policies
-from restock import new
 import json
 import os
 from stati import ai_module
