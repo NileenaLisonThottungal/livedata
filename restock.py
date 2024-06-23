@@ -3,7 +3,7 @@ import json
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.ensemble import RandomForestRegressor
+from xgboost import XGBRegressor
 from sklearn.preprocessing import LabelEncoder
 
 # Function to increase quantity
@@ -40,7 +40,7 @@ def train_model(df):
     X = preprocessed_df.drop(columns=['Transaction Date', 'Quantity'])
     y = preprocessed_df['Quantity']
 
-    model = RandomForestRegressor()
+    model = XGBRegressor()
     model.fit(X, y)
 
     return model
@@ -115,6 +115,9 @@ def new():
     plt.title('mainpro.xlsx - Quantity Over Time')
     ax_mainpro.legend(loc='upper left', bbox_to_anchor=(1, 1))
     st.pyplot(fig_mainpro)
+
+
+
 
 
 
