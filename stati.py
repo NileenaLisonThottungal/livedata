@@ -202,20 +202,27 @@ def display():
     # Add a refresh button to manually refresh the data
     if st.button("Refresh Data"):
         st.experimental_rerun()
-
 def showstat():
     st.title("Sales Analysis, Demand Forecasting, and AI Module")
 
-    # Create a select box in the sidebar to choose the functionality
-    selected_option = st.sidebar.selectbox("Select Functionality", ["Display Sales", "AI Module", "Demand Forecast"])
+    # Prompt user for a PIN to access the statistics page
+    pin = st.text_input("Enter PIN to access statistics", type="password")
+    if st.button("Submit"):
+        if pin == "4321":
+            st.success("Access granted")
 
-    # Execute the selected functionality
-    if selected_option == "Display Sales":
-        display()
-    elif selected_option == "AI Module":
-        ai_module()
-    elif selected_option == "Demand Forecast":
-        demand_forecast()
+            # Create a select box in the sidebar to choose the functionality
+            selected_option = st.sidebar.selectbox("Select Functionality", ["Display Sales", "AI Module", "Demand Forecast"])
+
+            # Execute the selected functionality
+            if selected_option == "Display Sales":
+                display()
+            elif selected_option == "AI Module":
+                ai_module()
+            elif selected_option == "Demand Forecast":
+                demand_forecast()
+        else:
+            st.error("Incorrect PIN. Access denied.")
 
 # Run the Streamlit app
 if __name__ == '__main__':
