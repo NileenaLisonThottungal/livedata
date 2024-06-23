@@ -1,20 +1,31 @@
 import pandas as pd
-from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 import numpy as np
-from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
-import seaborn as sns
 import streamlit as st
-import shutil
 from i import demand_forecast
+import shutil
 
-# Copy the file
+# Specify the file paths
 source_file = "web.xlsx"
 destination_file = "news.xlsx"
+
+# Copy the file
 shutil.copyfile(source_file, destination_file)
+
 print(f"File '{source_file}' copied to '{destination_file}' successfully.")
+# Define the Streamlit app function
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import streamlit as st
+from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 def ai_module():
     # Load dataset
@@ -121,6 +132,19 @@ def ai_module():
     else:
         st.write("The model's RMSE is equal to the baseline.")
 
+# Run the Streamlit app
+if __name__ == '__main__':
+    ai_module()
+
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 def display():
     st.title("Sales Analysis and Average Daily Sales Calculator")
     st.write("### Upload the datasets (Excel files)")
@@ -160,7 +184,7 @@ def display():
     # Artistic bar chart showing average daily sales for each product
     st.write("### Bar Chart - Average Daily Sales for Each Product")
     fig, ax = plt.subplots(figsize=(12, 8))
-    sns.barplot(y=average_daily_sales.index, x=average_daily_sales.values, hue=average_daily_sales.index, palette='viridis', ax=ax, dodge=False)
+    sns.barplot(y=average_daily_sales.index, x=average_daily_sales.values, palette='viridis', ax=ax)
     ax.set_xlabel('Average Daily Sales')
     ax.set_ylabel('Product')
     ax.set_title('Average Daily Sales for Each Product', fontsize=16)
@@ -172,7 +196,7 @@ def display():
     # Artistic bar chart showing total sales for each product
     st.write("### Bar Chart - Total Sales for Each Product")
     fig, ax = plt.subplots(figsize=(12, 8))
-    sns.barplot(y=total_sales_by_item.index, x=total_sales_by_item.values, hue=total_sales_by_item.index, palette='plasma', ax=ax, dodge=False)
+    sns.barplot(y=total_sales_by_item.index, x=total_sales_by_item.values, palette='plasma', ax=ax)
     ax.set_xlabel('Total Sales')
     ax.set_ylabel('Product')
     ax.set_title('Total Sales for Each Product', fontsize=16)
@@ -202,7 +226,27 @@ def display():
     # Add a refresh button to manually refresh the data
     if st.button("Refresh Data"):
         st.experimental_rerun()
-    def showstat():
+
+# Call the display function
+if __name__ == "__main__":
+    display()
+
+# Call the display function
+display()
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+import numpy as np
+import xgboost as xgb
+
+
+# main.py
+
+import streamlit as st
+def showstat():
     st.title("Sales Analysis, Demand Forecasting, and AI Module")
 
     # Create a select box in the sidebar to choose the functionality
@@ -216,6 +260,3 @@ def display():
         ai_module()
     elif selected_option == "Demand Forecast":
         demand_forecast()
-# Run the Streamlit app
-if __name__ == '__main__':
-    showstat()
