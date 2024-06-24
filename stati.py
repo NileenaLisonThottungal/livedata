@@ -245,18 +245,38 @@ import xgboost as xgb
 
 # main.py
 
-import streamlit as st
 def showstat():
     st.title("Sales Analysis, Demand Forecasting, and AI Module")
 
     # Create a select box in the sidebar to choose the functionality
     selected_option = st.sidebar.selectbox("Select Functionality", ["Display Sales", "AI Module", "Demand Forecast"])
 
-
-    # Execute the selected functionality
     if selected_option == "Display Sales":
-        display()
+        # Prompt user for a PIN to access the Display Sales page
+        pin = st.text_input("Enter PIN to access Display Sales", type="password", key="display_sales_pin")
+        if st.button("Submit Display Sales PIN"):
+            if pin == "4321":
+                st.success("Access granted")
+                display()
+            else:
+                st.error("Incorrect PIN. Access denied.")
+                
     elif selected_option == "AI Module":
-        ai_module()
+        # Prompt user for a PIN to access the AI Module page
+        pin = st.text_input("Enter PIN to access AI Module", type="password", key="ai_module_pin")
+        if st.button("Submit AI Module PIN"):
+            if pin == "4321":
+                st.success("Access granted")
+                ai_module()
+            else:
+                st.error("Incorrect PIN. Access denied.")
+                
     elif selected_option == "Demand Forecast":
-        demand_forecast()
+        # Prompt user for a PIN to access the Demand Forecast page
+        pin = st.text_input("Enter PIN to access Demand Forecast", type="password", key="demand_forecast_pin")
+        if st.button("Submit Demand Forecast PIN"):
+            if pin == "4321":
+                st.success("Access granted")
+                demand_forecast()
+            else:
+                st.error("Incorrect PIN. Access denied.")
